@@ -1,16 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-        :root {
-        --background: #f0f2f5;
-        --red: #e52e40;
-        --green: #33cc95;
-        --blue: #5429cc;
-        --blue-light: #6933ff;
-        --text-title: #363f5f;
-        --text-body: #969CB3;
-        --shape: #FFFFFF;
-    }
+    :root {
+        --main-color: #FFFFFF;
+        --bars-color: #FDF1EB;
+        --title-item-color: #ED7839;
+        --header-nav-text-color: #725C5C;
+    }   
 
     * {
         margin: 0;
@@ -23,13 +19,14 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 93.75%;
         }
 
-        @media (max-width: 1080px) {
+        @media (max-width: 780px) {
             font-size: 87.5%;
         }
     }
 
     body {
-        background: var(--background);
+        background: var(--main-color);
+        padding-left: 220px;
     }
 
     body, input, textarea, button {
