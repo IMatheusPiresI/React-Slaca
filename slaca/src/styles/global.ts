@@ -27,6 +27,18 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background: var(--main-color);
         padding-left: 220px;
+
+        @media (max-width: 765px) {
+            padding-left: 150px;
+        }
+    }
+
+    main {
+        padding: 20px 45px;
+
+        @media (max-width: 765px) {
+            padding: 20px 15px;
+        }
     }
 
     body, input, textarea, button {

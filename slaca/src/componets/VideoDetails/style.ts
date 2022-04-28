@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    padding:  20px 45px;
-    min-height: 100%;
-
+    height: 100%;
 
     div:nth-child(1){
         display: flex;
         width: 100%;
+        gap: 20px;
 
-        p {
+        h2 {
             color: var(--title-item-color);
             font-weight: 700;
             font-size: 1.5rem;
             text-align: justify;
+            max-width: 1000px;
         }
 
         div:nth-child(2){
-            width: 600px;
+            width: 300px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -47,13 +47,24 @@ export const Container = styled.section`
                 height:35px;
                 border: none;
                 border-radius: 5px;
-                font-size: 14px;
+                font-size: 16px;
 
                 &:nth-child(1) {
-                    width: 100px;
+                    width: 130px;
+
+                    svg{
+                        font-size:18px;
+                    }
                 }                    
             }
 
         }
+    }
+    .video-section{
+        display: flex;
+        gap: 20px;
+        margin: 25px 0px;
+        width: 100%;
+        height: 100%;
     }
 `;

@@ -11,11 +11,11 @@ export const Container = styled.nav`
     background: var(--main-color);
 
     img{
-        width: 220px;
+        width: 100%;
         height: auto;
     }
 
-    .header__name{
+    .header__name {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,4 +29,13 @@ export const Container = styled.nav`
         }
     }
 
+    @media (max-width: 765px) {
+        width: 150px;
+
+        .header__name{
+            h1 {
+                font-size: 23px;
+            }
+        }
+    }
 `;

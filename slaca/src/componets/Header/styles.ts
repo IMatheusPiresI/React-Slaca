@@ -8,18 +8,60 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 765px) {
+        padding: 5px 16px 5px 8px;
+    }
+
     .header__boxtext {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        p {
+        p{
             color: #725C5C;
             font-size: 14px;
+
+            @media (max-width: 1400px){
+                font-size: 11px;
+            }
+
+            @media (max-width: 1220px){
+                font-size: 10px;
+            }
+
+            @media (max-width: 620px) {
+                font-size: 9px;
+            }
+        }
+
+        p:nth-child(1){
+            @media (max-width: 765px) {
+                display: none;
+            }
         }
 
         p:nth-child(2) {
             font-size: 22px;
+
+            @media (max-width: 1400px){
+                font-size: 17px;
+            }
+
+            @media (max-width: 1220px){
+                font-size: 15px;
+            }
+
+            @media (max-width: 765px) {
+                font-size: 13px;
+            }
+
+            @media (max-width: 620px) {
+                font-size: 12px;
+            }
+
+            @media (max-width: 465px) {
+                font-size: 10px;
+            }
         }
     }
 
@@ -34,19 +76,32 @@ export const Container = styled.header`
         justify-content: center;
         align-items: center;
         margin-right: 2.5rem;
+
+        @media (max-width: 1065px) {
+            margin-right: .5rem;
+        }
+
         select {
             background: var(--bars-color);
             border-radius: 4px;
             align-items: center;
             padding: 5px 0px 5px 25px;
             color: #333333;
-            
+
+            @media (max-width: 765px) {
+                padding: 5px 0px 5px 15px;
+                font-size: 10px;
+            }
         }
 
         i {
             position: relative;
             left: 23px;
             color: #333333;
+
+            @media (max-width: 765px) {
+                left: 17px;
+            }
         }
     }
 
@@ -56,6 +111,12 @@ export const Container = styled.header`
             justify-content: center;
             text-align: right;
             margin-right: 10px;
+
+            @media (max-width: 1065px) {
+                p{
+                    display: none;
+                }
+            }
         }
 
         .header__user-num {
