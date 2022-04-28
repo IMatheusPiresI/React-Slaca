@@ -9,6 +9,12 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+
+    @media (max-width: 935px) {
+        max-width: 100% !important;
+        max-height: 400px;
+    }
+
     .container-details{
         width: 100%;
         height: calc(100% - 55px);
@@ -23,9 +29,27 @@ export const Container = styled.div`
         background-color: var(--bars-color);
         padding: 15px 0px 15px 14px;
 
+        @media (max-width: 935px) {
+            max-width: 100% !important;
+            max-height: 400px;
+            padding: 15px 0px 15px 25px;
+        }
+
+        @media (max-width: 450px) {
+            padding: 15px 0px 15px 5px;
+        }
+
         h4 {
             font-size: 20px;
             color: #4E4E4E;
+
+            @media (max-width: 935px) {
+                font-size: 25px;
+            }
+
+            @media (max-width: 450px) {
+                font-size: 20px;       
+            }
         }
     }
 
@@ -40,6 +64,11 @@ export const Container = styled.div`
                 color: #5C5C5C;
             }
         }
+
+        @media (max-width: 450px) {
+            padding: 0px 3px 0px 3px;
+        }
+
     }
 
     div:nth-child(1) {

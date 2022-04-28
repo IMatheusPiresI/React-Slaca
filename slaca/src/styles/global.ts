@@ -31,6 +31,10 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 765px) {
             padding-left: 150px;
         }
+
+        @media (max-width: 450px) {
+            padding-left: 110px;
+        }
     }
 
     main {

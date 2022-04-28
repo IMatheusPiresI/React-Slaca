@@ -81,6 +81,10 @@ export const Container = styled.header`
             margin-right: .5rem;
         }
 
+        @media (max-width: 430px) {
+            margin-right: -.5rem;
+        }
+
         select {
             background: var(--bars-color);
             border-radius: 4px;
@@ -92,6 +96,12 @@ export const Container = styled.header`
                 padding: 5px 0px 5px 15px;
                 font-size: 10px;
             }
+
+            @media (max-width: 430px) {
+                width: 50px;
+                padding: 5px 0px 5px 10px;
+                font-size: 10px;
+            }
         }
 
         i {
@@ -101,6 +111,11 @@ export const Container = styled.header`
 
             @media (max-width: 765px) {
                 left: 17px;
+            }
+
+            @media (max-width: 430px) {
+                font-size: 10px;
+                left: 13px;
             }
         }
     }
@@ -132,6 +147,10 @@ export const Container = styled.header`
             height: 20px;
             color: var(--main-color);
             background-color: #F85959;
+
+            @media(max-width: 765px) {
+                right: 18px;
+            }
         }
     }
 

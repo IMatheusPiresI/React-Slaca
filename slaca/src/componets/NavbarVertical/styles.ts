@@ -38,4 +38,14 @@ export const Container = styled.nav`
             }
         }
     }
+
+    @media (max-width: 450px) {
+        width: 110px;
+
+        .header__name{
+            h1 {
+                font-size: 18px;
+            }
+        }
+    }
 `;

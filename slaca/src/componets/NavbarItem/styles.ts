@@ -16,8 +16,16 @@ export const Container = styled.div<isOpen>`
     background-color: ${({isOpen}) => isOpen ? 'var(--bars-color)' : '#FFF'};
 
     a{
+        width: 100%;
         text-decoration: none;
         padding-left: 24px;
         color: #725C5C;
+    }
+
+    @media (max-width: 450px) {
+        a{
+            padding-left: 8px;
+            font-size: 13px;
+        }
     }
 `;
