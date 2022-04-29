@@ -5,6 +5,7 @@ export const Container = styled.article`
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .12);
     padding: 15px 25px;
+    word-break: break-all;
 
     h5 {
         color: var(--title-item-color);

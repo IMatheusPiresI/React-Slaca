@@ -3,12 +3,18 @@ import { Container } from "./styles";
 import { BsFillSuitHeartFill } from 'react-icons/bs'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 
-export function Topic(){
+interface Topic {
+    subject: string,
+    content: string,
+    dataId:number,
+}
+
+export function Topic({subject, content, dataId}: Topic ){
     return(
-        <Container>
-            <h5>Assunto da pergunta aparece aqui</h5>
+        <Container data-id={dataId}>
+            <h5>{subject}</h5>
             <p>Carlos Henrique Santos</p>
-            <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+            <p>{content}</p>
             <div>
                 <button>
                     <BsThreeDotsVertical/>
