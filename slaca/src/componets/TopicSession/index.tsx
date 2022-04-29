@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TopicContext } from "../../context/CreateTopics";
 import { Topic } from "../Topic";
 import { Container } from "./styles";
@@ -13,12 +13,12 @@ export function TopicSession(){
     const { allTopics, setAllTopics } = useContext(TopicContext);
 
     useEffect(() => {
-        if(localStorage.getItem('topic')){
-            const topics= localStorage.getItem('topic');
-            const allTopicsSession = topics && JSON.parse(topics)
-            return setAllTopics(allTopicsSession);
+        if(localStorage.getItem('topic') !== null){
+            const allTopic = localStorage.getItem('topic');
+            const newTopics = allTopic && JSON.parse(allTopic);
+            setAllTopics(newTopics);
         }
-    },[setAllTopics, allTopics])
+    }, [localStorage.getItem('topic')])
 
     return(
         <Container>
