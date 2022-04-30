@@ -16,6 +16,7 @@ export function TopicSession(){
             const allTopic = localStorage.getItem('topic');
             const newTopics = allTopic && JSON.parse(allTopic);
             setAllTopics(newTopics);
+            
         }
     }, [localStorage.getItem('topic')])
 
