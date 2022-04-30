@@ -5,23 +5,27 @@ import { Header } from './componets/Header/Index';
 import { Resume } from './componets/Resume';
 import { TopicSession } from './componets/TopicSession';
 import { VideoDetails } from './componets/VideoDetails';
+import { ChangeLanguageProvider } from './context/ChangeLanguege';
 import { TopicContextProvider } from './context/CreateTopics';
 import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
     <Fragment>
-      <TopicContextProvider>
+      
+      <ChangeLanguageProvider>
           <Header/>
           <main>
             <VideoDetails/>
             <Resume/>
-            <Discussions/>
-            <TopicSession/>
+            <TopicContextProvider>
+              <Discussions/>
+              <TopicSession/>
+            </TopicContextProvider>
             <Footer/>
           </main>
+      </ChangeLanguageProvider>
           <GlobalStyle/>
-      </TopicContextProvider>
     </Fragment>
   );
 }

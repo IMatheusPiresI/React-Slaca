@@ -1,17 +1,20 @@
 import { Container } from "./styles";
 import logo from '../../assets/images/logo.png'
 import { NavbarVerticalItem } from "../NavbarItem";
+import { ChangeLanguage } from "../../context/ChangeLanguege";
+import { useContext } from "react";
 
 const itemsNav = [
-    {text: 'Apresentação', isOpen: false},
-    {text: 'Autores', isOpen: false},
-    {text: 'Eixos Temáticos', isOpen: false},
-    {text: 'Trabalhos', isOpen: true},
-    {text: 'Contato', isOpen: false}
+    {textPortuguese: 'Apresentação', textEnglish: 'Presentation', isOpen: false},
+    {textPortuguese: 'Autores', textEnglish: 'Authors', isOpen: false},
+    {textPortuguese: 'Eixos Temáticos', textEnglish: 'Thematic Axes', isOpen: false},
+    {textPortuguese: 'Trabalhos', textEnglish: 'Works', isOpen: true},
+    {textPortuguese: 'Contato', textEnglish: 'Contact', isOpen: false}
 
 ]
 
 export function NavbarVertical() {
+    const { language } = useContext(ChangeLanguage);
     return(
         <Container>
             <div className="header__name">
@@ -22,7 +25,7 @@ export function NavbarVertical() {
                 return(
                 <NavbarVerticalItem
                     key={key}
-                    text={item.text}
+                    text={language ? item.textEnglish : item.textPortuguese}
                     isOpen={item.isOpen}
                 />
                 )

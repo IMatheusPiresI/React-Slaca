@@ -6,6 +6,7 @@ export const Container = styled.article`
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .12);
     padding: 15px 25px;
     word-break: break-all;
+    position: relative;
 
     h5 {
         color: var(--title-item-color);
@@ -57,5 +58,26 @@ export const Container = styled.article`
         background-color: var(--title-item-color);
         color: var(--main-color);
         border: none;
+    }
+
+    .box-btn-remove{
+        border: 1px solid #CCCCCC;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 60px;
+        left: 25px;
+        background-color: rgba(255,255,255, .9);
+        box-shadow: 0px 0px 10px 0px #5C5C5C;
+
+        button {
+            width: 100%;
+            height: 100%;
+            padding: 5px 10px;
+            font-size: 18px;
+            left: 0px
+        }
     }
 `;

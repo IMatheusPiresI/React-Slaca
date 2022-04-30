@@ -10,21 +10,18 @@ export function FormTopic() {
   function handleSubmit(e: FormEvent){
       e.preventDefault();
 
-      const id = Math.floor(Math.random() * 10000);
-      console.log(id);
-
-      setNewTopic(subject, content, id);
+      setNewTopic(subject, content);
   }
   return (
     <Container onSubmit={handleSubmit}>
         <h4>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h4>
         <div>
           <label htmlFor="title">Assunto</label>
-          <input type="text" id="title" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Defina um tópico sucinto para notificar os autores...'/>
+          <input type="text" id="title" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Defina um tópico sucinto para notificar os autores...' required/>
         </div>
         <div>
           <label htmlFor="content">Conteúdo</label>
-          <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.target.value)}></textarea>
+          <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.target.value)} required></textarea>
           <div className='format'>
               <p>
                 <span><ImBold/></span>

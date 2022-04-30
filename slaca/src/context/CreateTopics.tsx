@@ -9,7 +9,7 @@ type TopicContextType = {
     setSubject: (newState: string) => void,
     content: string,
     setContent: (newState: string) => void,
-    setNewTopic: (subject: string, content: string, id: number) => void;
+    setNewTopic: (subject: string, content: string) => void;
     allTopics: never[];
     setAllTopics: (newState: []) => void,
 }
@@ -33,11 +33,10 @@ export const TopicContextProvider = ({children}: TopicContextProps) => {
     const [content, setContent] = useState(initialValue.content);
     const [allTopics, setAllTopics] = useState(initialValue.allTopics);
 
-    function setNewTopic(subject: string, content: string, id: number){
+    function setNewTopic(subject: string, content: string){
         if(localStorage.getItem('topic')){
             const topic = 
                 {
-                    id: id,
                     subject: subject,
                     content: content,
                 }
@@ -53,7 +52,6 @@ export const TopicContextProvider = ({children}: TopicContextProps) => {
         }else{
             const topic = [
                 {
-                    id: id,
                     subject: subject,
                     content: content,
                 }

@@ -11,14 +11,17 @@ import doi from '../../assets/images/doi.svg'
 
 import { Datails } from "../Details";
 import { VideoStyle } from "../VideoStyle";
+import { useContext } from "react";
+import { ChangeLanguage } from "../../context/ChangeLanguege";
 
 
 export function VideoDetails(){
+    const { language } = useContext(ChangeLanguage)
     return(
         <Container>
             <div>
                 <div>
-                    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
+                    <h2>{language ? 'Sensory analysis of functional preparations developed for schoolchildren between 9 and 15 years old, in the city of Campinas/SP' : 'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP'}</h2>
                 </div>
                 <div>
                     <button><FaDownload/> <span>Download</span></button>

@@ -4,7 +4,6 @@ import { Topic } from "../Topic";
 import { Container } from "./styles";
 
 interface Topic {
-    id: number;
     subject: string;
     content: string;
 }
@@ -22,11 +21,11 @@ export function TopicSession(){
 
     return(
         <Container>
-            {allTopics.map((topic: Topic) => {
+            {allTopics.map((topic: Topic, id: number) => {
                 return(
                     <Topic
-                        dataId={topic.id}
-                        key={topic.subject}
+                        id={id}
+                        key={id}
                         subject={topic.subject}
                         content={topic.content}
                     />
