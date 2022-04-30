@@ -7,6 +7,8 @@ import { TopicSession } from './componets/TopicSession';
 import { VideoDetails } from './componets/VideoDetails';
 import { ChangeLanguageProvider } from './context/ChangeLanguege';
 import { TopicContextProvider } from './context/CreateTopics';
+import { EditTopicContextProvider } from './context/EditTopic';
+import { RemoveTopicContextProvider } from './context/RemoveTopics';
 import { GlobalStyle } from './styles/global';
 
 function App() {
@@ -20,7 +22,11 @@ function App() {
             <Resume/>
             <TopicContextProvider>
               <Discussions/>
-              <TopicSession/>
+              <RemoveTopicContextProvider>
+                <EditTopicContextProvider>
+                  <TopicSession/>
+                </EditTopicContextProvider>
+              </RemoveTopicContextProvider>
             </TopicContextProvider>
             <Footer/>
           </main>

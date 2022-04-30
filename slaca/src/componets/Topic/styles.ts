@@ -23,19 +23,11 @@ export const Container = styled.article`
         color: #4D4D4D;
     }
 
-    div {
+    .btn-section {
         display: flex;
         align-items: center;
 
-        p {
-            color: #757575 !important;
-            margin-left: 15px !important;
-        }
-
-
-    }
-
-    button:first-child {
+        button:first-child {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,10 +52,19 @@ export const Container = styled.article`
         border: none;
     }
 
+        p {
+            color: #757575 !important;
+            margin-left: 15px !important;
+        }
+
+
+    }
+
     .box-btn-remove{
         border: 1px solid #CCCCCC;
-        width: 100px;
+        width: auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -72,12 +73,25 @@ export const Container = styled.article`
         background-color: rgba(255,255,255, .9);
         box-shadow: 0px 0px 10px 0px #5C5C5C;
 
-        button {
+        button{
             width: 100%;
             height: 100%;
+            background-color: var(--main-color);
+            color: var(--title-item-color) ;
+            font-size: 18px ;
+            display: flex;
+            gap: 5px;
+            transition: .2s linear ;
+            position: relative;
+            text-align: left;
+            bottom: 0 ;
+            border: none;
             padding: 5px 10px;
-            font-size: 18px;
-            left: 0px
+
+            &:hover {
+                background-color: var(--title-item-color);
+                color: var(--main-color);
+            }
         }
     }
 `;

@@ -3,9 +3,12 @@ import { Container } from "./styles";
 import { BsFillSuitHeartFill } from 'react-icons/bs'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { FaTrashAlt } from 'react-icons/fa'
-import { useContext, useState } from "react";
-import { TopicContext } from "../../context/CreateTopics";
-import { setTimeout } from "timers/promises";
+import { BsPencil } from 'react-icons/bs'
+import { Fragment, useContext, useEffect, useState } from "react";
+import { ChangeLanguage } from "../../context/ChangeLanguege";
+import { RemoveTopicContext } from "../../context/RemoveTopics";
+import { EditTopicContext } from "../../context/EditTopic";
+import { ModalEdit } from "../ModalEditTopic";
 
 interface Topic {
     subject: string,
@@ -16,37 +19,25 @@ interface Topic {
 
 
 export function Topic({subject, content, id}: Topic ){
-    const { allTopics, setAllTopics } = useContext(TopicContext);
     const [showRemoveButton, setShowRemoveButton] = useState(false);
+    const { language } = useContext(ChangeLanguage);
+    const { handleRemoveItem, hideTopicOptions } = useContext(RemoveTopicContext);
+    const { handleOpenModal, showEditModal } = useContext(EditTopicContext);
 
-    function attTopics(){
-        const newTopics = localStorage.getItem('topic');
-        const attTopics = newTopics && JSON.parse(newTopics);
-        setAllTopics(attTopics);
-    }
 
-    function handleRemoveItem(e: any): void{
-        allTopics.splice(Number(e.target!.dataset.id), 1);
-        localStorage.setItem('topic', JSON.stringify(allTopics));
-        attTopics();
-    }
-
-    function hideRemoveButtonTopic() {
-        if(showRemoveButton){
-            const setFalse = setInterval(() => {
-                setShowRemoveButton(false);
-                clearInterval(setFalse);
-            },5000)
+    useEffect(() => {
+        setShowRemoveButton(hideTopicOptions)
+        if(showEditModal){
+            setShowRemoveButton(false);
         }
-    }
-    hideRemoveButtonTopic();
+    }, [localStorage.getItem('topic'), showEditModal])
 
     return(
         <Container>
             <h5>{subject}</h5>
             <p>Carlos Henrique Santos</p>
             <p>{content}</p>
-            <div>
+            <div className="btn-section">
                 <button onClick={() => setShowRemoveButton(!showRemoveButton)}>
                     <BsThreeDotsVertical/>
                 </button>
@@ -57,10 +48,14 @@ export function Topic({subject, content, id}: Topic ){
                 <p>1 resposta</p>
             </div>
             {showRemoveButton && 
-                <div className="box-btn-remove">
-                    <button data-id={id} onClick={handleRemoveItem}><FaTrashAlt/> Excluir</button>
-                </div>
+                <Fragment>
+                    <div className="box-btn-remove">
+                        <button data-id={id} onClick={handleRemoveItem}><FaTrashAlt/> {language ? 'Remove' : 'Remover'}</button>
+                        <button data-id={id} onClick={handleOpenModal}><BsPencil/> {language ? 'Edit' : 'Editar'}</button>
+                    </div>
+                </Fragment>
             }
+            {showEditModal && <ModalEdit/>}
         </Container>
     )
 }

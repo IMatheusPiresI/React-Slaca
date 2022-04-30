@@ -56,4 +56,38 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    .modal {
+        min-width: 400px;
+        max-width: 700px;
+        height: auto;
+        background-color: var(--main-color);
+        border-radius: 10px;
+        border: 1px solid var(--title-item-color);
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, .3);
+        animation: modalAnimation 1s forwards;
+
+        @keyframes modalAnimation {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(-50px);
+                opacity: 1;
+            }
+        }
+    }
+    .overlay-modal {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .2);
+    }
 `;
