@@ -8,7 +8,7 @@ export function Datails() {
     return(
         <Container>
             <header>
-                <h4>Detalhes</h4>
+                <h4>{language ? 'Details' : 'Detalhes'}</h4>
             </header>
             <div className="container-details">
                 <div>

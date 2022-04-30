@@ -45,7 +45,7 @@ export function Topic({subject, content, id}: Topic ){
                     <BsFillSuitHeartFill/>
                 </button>
                 <p>1 like</p>
-                <p>1 resposta</p>
+                <p>1 {language ? 'answer' : 'resposta'}</p>
             </div>
             {showRemoveButton && 
                 <Fragment>
