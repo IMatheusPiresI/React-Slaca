@@ -1,11 +1,11 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import { TopicContext } from "./CreateTopics";
 
-interface RemoveTopicContextprops {
+interface RemoveTopicContextProviderprops {
     children: ReactNode;
 }
 
-type RemoveTopicContext = {
+type RemoveTopicContextProps = {
     handleRemoveItem: (e:any) => void,
     hideTopicOptions: boolean
     setHideTopicOptions: (newState: boolean) => void,
@@ -18,10 +18,10 @@ const initialValue = {
 }
 
 //  Criando nosso contexto TopicContext
-export const RemoveTopicContext = createContext<RemoveTopicContext>(initialValue);
+export const RemoveTopicContext = createContext<RemoveTopicContextProps>(initialValue);
 
 
-export const RemoveTopicContextProvider = ({children}: RemoveTopicContextprops) => {
+export const RemoveTopicContextProvider = ({children}: RemoveTopicContextProviderprops) => {
     const { allTopics, setAllTopics } = useContext(TopicContext);
     const [ hideTopicOptions, setHideTopicOptions ] = useState(initialValue.hideTopicOptions)
 

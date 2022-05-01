@@ -10,7 +10,7 @@ export function NavbarVerticalItem({text, isOpen}: NavbarItemProps){
         <Container
             isOpen={isOpen}
         >
-            <a href="">{text}</a>
+            <a href="*">{text}</a>
         </Container>
     )
 }

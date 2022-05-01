@@ -39,15 +39,15 @@ export function ModalEdit(){
                 <BoxInputs>
                     <div>
                         <label htmlFor="assunt">{language? 'Assunt' : 'Assunto'}</label>
-                        <input type="text" name="assunt" id="assunt" value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                        <input type="text" name="assunt" id="assunt" value={subject} onChange={(e) => setSubject(e.target.value)} required/>
                     </div>
                     <div>
                         <label htmlFor="content">{language? 'Content' : 'Conteúdo'}</label>
-                        <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.target.value)}></textarea>
+                        <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.target.value)} required></textarea>
                     </div>
                 </BoxInputs>
 
-                <button className='btn-final-form' type='submit'>Finalizar Edição</button>
+                <button className='btn-final-form' type='submit'>{language ? 'Finish Editing' : 'Finalizar Edição'}</button>
             </Container>
             
         </Modal>

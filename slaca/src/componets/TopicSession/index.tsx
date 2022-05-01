@@ -1,16 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { TopicContext } from "../../context/CreateTopics";
 import { Topic } from "../Topic";
 import { Container } from "./styles";
 
-interface Topic {
+interface TopicProps {
     subject: string;
     content: string;
 }
 
 export function TopicSession(){
     const { allTopics, setAllTopics } = useContext(TopicContext);
-
+    const local  = localStorage.getItem('topic')
+    
     useEffect(() => {
         if(localStorage.getItem('topic') !== null){
             const allTopic = localStorage.getItem('topic');
@@ -18,11 +19,11 @@ export function TopicSession(){
             setAllTopics(newTopics);
             
         }
-    }, [localStorage.getItem('topic')])
+    }, [local, setAllTopics])
 
     return(
         <Container>
-            {allTopics.map((topic: Topic, id: number) => {
+            {allTopics.map((topic: TopicProps, id: number) => {
                 return(
                     <Topic
                         id={id}

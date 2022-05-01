@@ -10,27 +10,25 @@ import { RemoveTopicContext } from "../../context/RemoveTopics";
 import { EditTopicContext } from "../../context/EditTopic";
 import { ModalEdit } from "../ModalEditTopic";
 
-interface Topic {
+interface TopicProps {
     subject: string,
     content: string,
     id:number,
 }
 
-
-
-export function Topic({subject, content, id}: Topic ){
+export function Topic({subject, content, id}: TopicProps ){
     const [showRemoveButton, setShowRemoveButton] = useState(false);
     const { language } = useContext(ChangeLanguage);
     const { handleRemoveItem, hideTopicOptions } = useContext(RemoveTopicContext);
     const { handleOpenModal, showEditModal } = useContext(EditTopicContext);
-
+    const local = localStorage.getItem('topic')
 
     useEffect(() => {
         setShowRemoveButton(hideTopicOptions)
         if(showEditModal){
             setShowRemoveButton(false);
         }
-    }, [localStorage.getItem('topic'), showEditModal])
+    }, [local, showEditModal, hideTopicOptions])
 
     return(
         <Container>

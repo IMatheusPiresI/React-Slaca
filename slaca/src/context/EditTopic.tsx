@@ -1,7 +1,7 @@
-import { createContext, MutableRefObject, ReactNode, useContext, useRef, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { TopicContext } from "./CreateTopics";
 
-interface EditTopicContextProvider {
+interface EditTopicContextProviderProps {
     children: ReactNode
 }
 
@@ -33,7 +33,7 @@ const initialValue = {
 }
 export const EditTopicContext = createContext<EditTopicContextProps>(initialValue);
 
-export const EditTopicContextProvider = ({children}: EditTopicContextProvider) => {
+export const EditTopicContextProvider = ({children}: EditTopicContextProviderProps) => {
     const { allTopics } = useContext(TopicContext);
     const [showEditModal, setShowEditModal] = useState(false);
     const [content, setContent] = useState(initialValue.content)

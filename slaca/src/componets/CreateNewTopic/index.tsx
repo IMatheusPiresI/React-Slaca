@@ -6,11 +6,11 @@ import icon3 from '../../assets/images/icone3.svg'
 import { useContext } from 'react';
 import { ChangeLanguage } from '../../context/ChangeLanguege';
 
-interface CreateNewTopic {
+interface CreateNewTopicProps {
     setNewTopic(topic: boolean): void;
 }
 
-export function CreateNewTopic({setNewTopic}: CreateNewTopic) {
+export function CreateNewTopic({setNewTopic}: CreateNewTopicProps) {
   const { language } = useContext(ChangeLanguage);
 
   return (
