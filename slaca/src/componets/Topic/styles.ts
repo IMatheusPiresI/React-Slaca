@@ -8,9 +8,32 @@ export const Container = styled.article`
     word-break: break-all;
     position: relative;
 
+    @media (max-width: 750px) {
+        padding: 10px 18px;
+    }
+
     h5 {
         color: var(--title-item-color);
         font-size: 25px;
+
+        @media (max-width: 750px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 19px;
+        }
+    }
+
+    p {
+        @media (max-width: 750px) {
+            font-size: 12px;
+        }
+
+        
+        @media (max-width: 450px) {
+            font-size: 11px;
+        }   
     }
 
     p:nth-child(2) {

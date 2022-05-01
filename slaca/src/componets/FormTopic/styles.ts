@@ -57,6 +57,10 @@ export const Container = styled.form`
         padding: 10px 20px;
         height: 6rem;
         resize: none;
+
+        @media (max-width: 625px) {
+            padding: 5px 10px;
+        }
     }
 
     .format{

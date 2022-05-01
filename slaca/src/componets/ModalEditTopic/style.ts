@@ -33,6 +33,11 @@ export const Container = styled.form`
         &:hover {
             transform: scale(1.1);
         }
+
+        @media (max-width: 510px) {
+            right: 5px;
+            top: 5px;
+        }   
     }
 
     .btn-final-form {

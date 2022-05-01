@@ -8,4 +8,8 @@ export const Container = styled.section`
     gap: 1.5rem;
     padding: 2rem 1rem 0rem 1rem;
     border-top: 1px solid #E7E7E7;
+
+    @media (max-width: 750px) {
+        padding: 4rem 0rem 0rem 0rem;
+    }
 `;

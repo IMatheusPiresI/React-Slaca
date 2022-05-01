@@ -78,6 +78,10 @@ export const GlobalStyle = createGlobalStyle`
                 opacity: 1;
             }
         }
+        
+        @media (max-width: 510px) {
+            min-width: 300px;
+        }   
     }
     .overlay-modal {
         position: fixed;
