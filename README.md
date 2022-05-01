@@ -19,15 +19,15 @@ Repositório do projeto **Slaca** desenvolvido com fins didáticos de aprimorame
 
 <h3 id="preview">🎥 Preview</h3>
 
-<img src="./animacao.gif" width="100%">
+<img src="./slaca.gif" width="100%">
 
 <h3 id="inicio">🚀 Site do projeto</h3>
 
-[Visite o Site do Projeto Slaca](https://movies-app-beta-henna.vercel.app) 🎮
+[Visite o Site do Projeto Slaca](https://slaca-nine.vercel.app/) 🎮
 
 <h3 id="acessar-projeto">📁 Inicialização da Clonagem</h3>
 
-◽ <a href="https://github.com/IMatheusPiresI/React-API-Filmes">Acessar</a>🔗 o código fonte pelo GitHub. <br>
+◽ <a href="https://github.com/IMatheusPiresI/React-Slaca">Acessar</a>🔗 o código fonte pelo GitHub. <br>
 ◽ Clonar o repositório ultilizando Git Bash + o comando:
 
        $ git clone https://github.com/IMatheusPiresI/React-Slaca.git
@@ -42,7 +42,7 @@ Repositório do projeto **Slaca** desenvolvido com fins didáticos de aprimorame
 
 <h3 id="instalacao">🛠️ Acessar Projeto</h3>
 
-Ao clicar em <a href="https://movies-app-beta-henna.vercel.app" target="_blank">Movies App</a>🔗 o site irá abrir para que possa utilizá-lo. Ele salvará as informações de filmes sorteados e pesquisados caso feche e página e abra novamente, todos esse dados são salvos e recuperados via localStorage;
+Ao clicar em <a href="https://slaca-nine.vercel.app/" target="_blank">Slaca</a>🔗 o site irá abrir para que possa utilizá-lo. Ele salvará as informações dos tópicos criados, removidos e editados, todos esse dados são salvos e recuperados via localStorage;
 
 <h3 id="tecnologias">⚙️ Tecnologias Utilizadas</h3>
 
