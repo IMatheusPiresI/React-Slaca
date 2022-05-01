@@ -60,7 +60,7 @@ export const Container = styled.header`
             }
 
             @media (max-width: 465px) {
-                font-size: 10px;
+                font-size: 9px;
             }
         }
     }
@@ -152,6 +152,13 @@ export const Container = styled.header`
                 right: 18px;
             }
         }
+    }
+
+    img {
+        @media (max-width: 465px) {
+            width: 50px;
+        }
+
     }
 
     

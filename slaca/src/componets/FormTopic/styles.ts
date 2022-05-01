@@ -7,9 +7,14 @@ export const Container = styled.form`
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: 500px) {
+        padding: 10px 15px;
+    }
+
     h4 {
         color: #5C5C5C;
         font-weight: 400;
+        text-align: center;
     }
 
     div{
@@ -20,6 +25,10 @@ export const Container = styled.form`
             color: var(--title-item-color);
             font-weight: bold;
             font-size: 23px;
+
+            @media (max-width: 830px) {
+                font-size: 20px;
+            }
         }
 
         input[type=text] {
@@ -29,6 +38,14 @@ export const Container = styled.form`
             border: 1px solid #CCCCCC;
             border-radius: 5px;
             outline: none;
+
+            @media (max-width: 830px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 625px) {
+                padding: 10px 0px 10px 10px;
+            }
         }
 
     }
@@ -39,6 +56,7 @@ export const Container = styled.form`
         outline: none;
         padding: 10px 20px;
         height: 6rem;
+        resize: none;
     }
 
     .format{
@@ -64,6 +82,15 @@ export const Container = styled.form`
             margin-right: 25px;
             cursor: pointer;
 
+            @media (max-width: 500px) {
+                margin-right: 15px;
+            }
+        }
+
+        span{
+            @media (max-width: 500px) {
+                font-size: 16px;
+            }
         }
 
         button {

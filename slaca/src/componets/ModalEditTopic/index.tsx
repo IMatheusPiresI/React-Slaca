@@ -15,9 +15,8 @@ export function ModalEdit(){
 
     function handleEditTopic(e: any){
         e.preventDefault();
-        let topic: Topic = allTopics
-        console.log(topic)
-        topic[idTopic] = { subject: subject, content: content}
+        let topic: Topic = allTopics;
+        topic[idTopic] = { subject: subject, content: content};
         localStorage.setItem('topic', JSON.stringify(topic));
         const getTopics = localStorage.getItem('topic');
         const newTopics = getTopics && JSON.parse(getTopics);

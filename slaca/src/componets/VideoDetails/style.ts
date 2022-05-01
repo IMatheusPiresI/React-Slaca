@@ -110,10 +110,7 @@ export const Container = styled.section`
                         font-size:18px;
                     }
                 }
-                
-                @media(max-width: 999px){
-                    
-                }
+
             }
         }
     }
@@ -133,10 +130,6 @@ export const Container = styled.section`
         }
 
         @media (max-width:1145px) {
-            height: 200px;
-        }
-
-        @media (max-width:935px) {
             flex-direction: column;
             height: 100%;
         }

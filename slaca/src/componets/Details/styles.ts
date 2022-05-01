@@ -10,7 +10,7 @@ export const Container = styled.div`
     flex-direction: column;
 
 
-    @media (max-width: 935px) {
+    @media (max-width: 1145px) {
         max-width: 100% !important;
         max-height: 400px;
     }
@@ -29,7 +29,7 @@ export const Container = styled.div`
         background-color: var(--bars-color);
         padding: 15px 0px 15px 14px;
 
-        @media (max-width: 935px) {
+        @media (max-width: 1145px) {
             max-width: 100% !important;
             max-height: 400px;
             padding: 15px 0px 15px 25px;

@@ -12,6 +12,7 @@ export const Container = styled.section`
 
     h4 {
         color: var(--title-item-color);
+        text-align: center;
     }
 
     div {
@@ -22,6 +23,10 @@ export const Container = styled.section`
         img {
             width: 70px;
             height: auto;
+
+            @media (max-width:500px) {
+                width: 40px;
+            }
         }
     }
 
@@ -30,6 +35,10 @@ export const Container = styled.section`
         max-width: 900px;
         color: #595959;
         padding: 10px 0px 20px 0px;
+
+        @media (max-width: 500px) {
+                font-size: 12px;
+        }
     }
 
     button {
