@@ -19,7 +19,7 @@ Repositório do projeto **Slaca** desenvolvido com fins didáticos de aprimorame
 
 <h3 id="preview">🎥 Preview</h3>
 
-<img src="./slaca.gif" width="100%">
+<img src="./slaca/slaca.gif" width="100%">
 
 <h3 id="inicio">🚀 Site do projeto</h3>
 
