@@ -64,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: var(--main-color);
         border-radius: 10px;
         border: 1px solid var(--title-item-color);
-        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, .3);
+        box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, .2);
         animation: modalAnimation 1s forwards;
 
         @keyframes modalAnimation {
@@ -78,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
                 opacity: 1;
             }
         }
-        
+
         @media (max-width: 510px) {
             min-width: 300px;
         }   
