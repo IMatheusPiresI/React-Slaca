@@ -30,7 +30,7 @@ Repositório do projeto **Slaca** desenvolvido com fins didáticos de aprimorame
 ◽ <a href="https://github.com/IMatheusPiresI/React-API-Filmes">Acessar</a>🔗 o código fonte pelo GitHub. <br>
 ◽ Clonar o repositório ultilizando Git Bash + o comando:
 
-       $ git clone https://github.com/IMatheusPiresI/React-API-Filmes.git
+       $ git clone https://github.com/IMatheusPiresI/React-Slaca.git
 
 ◽ Acessar a pasta slaca e executar o comando <br>
 
